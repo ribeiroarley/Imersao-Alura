@@ -1,0 +1,12 @@
+Prompt para criação da Skill
+
+
+Com base no projeto que acabamos de construir, agora cria um Skill no Codex que seja replicável, com todas as instruções completas de sistema.
+ Mantenha a mesma estrutura:
+- Dois fluxos de entrada (briefing / formulário guiado em 5 etapas)
+- Mapeamento de campos obrigatórios e opcionais com blocos e formatos
+- Relatório de validação com alertas de regra de negócio
+- Resumo executivo antes da geração
+- Geração de documento Word com nome padronizado
+- Carrega o catálogo, template e brand book da pasta DOCS
+- Deixe também os arquivos de referência sempre nesta mesma pasta do projeto

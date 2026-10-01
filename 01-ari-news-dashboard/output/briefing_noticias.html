@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ARI NEWS — Briefing Executivo de Inteligência Corporativa</title>
+  <style>
+    /* Reset e Geometria Estrita (Cantos de 90 Graus) */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      border-radius: 0px !important;
+    }
+
+    body {
+      background-color: #f8f9fa;
+      color: #0d0d0d;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      padding: 48px 24px;
+    }
+
+    .container {
+      max-width: 920px;
+      margin: 0 auto;
+    }
+
+    /* Cabeçalho Executivo Institucional */
+    .header {
+      background: #ffffff;
+      border: 1px solid #e0e0e0;
+      border-bottom: 3px solid #0d0d0d;
+      padding: 36px 32px;
+      margin-bottom: 28px;
+    }
+
+    .header-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .brand-eyebrow {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #555555;
+      margin-bottom: 4px;
+    }
+
+    .brand-title {
+      font-size: 30px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: #0d0d0d;
+      line-height: 1.1;
+    }
+
+    .brand-subtitle {
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #555555;
+      margin-top: 6px;
+    }
+
+    .header-meta {
+      text-align: right;
+      border-left: 2px solid #e0e0e0;
+      padding-left: 18px;
+    }
+
+    .meta-badge {
+      display: inline-block;
+      background: #0d0d0d;
+      color: #ffffff;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 3px 8px;
+      margin-bottom: 6px;
+    }
+
+    .meta-date {
+      font-size: 13px;
+      font-weight: 600;
+      color: #0d0d0d;
+    }
+
+    .header-summary {
+      margin-top: 24px;
+      padding-top: 18px;
+      border-top: 1px solid #e0e0e0;
+      font-size: 14px;
+      color: #444444;
+      line-height: 1.6;
+    }
+
+    /* Feed de Notícias */
+    .news-feed {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .news-card {
+      background: #ffffff;
+      border: 1px solid #e0e0e0;
+      padding: 36px 32px;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .news-card:hover {
+      border-color: #0d0d0d;
+    }
+
+    .card-topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .card-index {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      color: #777777;
+      text-transform: uppercase;
+    }
+
+    .card-category {
+      background: #f0f0f0;
+      color: #0d0d0d;
+      border: 1px solid #e0e0e0;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+    }
+
+    .news-title {
+      font-size: 22px;
+      font-weight: 700;
+      line-height: 1.35;
+      color: #0d0d0d;
+      margin-bottom: 12px;
+      letter-spacing: -0.01em;
+    }
+
+    .news-source-line {
+      font-size: 12.5px;
+      color: #555555;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .news-source-line .source-name {
+      font-weight: 600;
+      color: #0d0d0d;
+    }
+
+    .news-source-line a {
+      color: #0d0d0d;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      font-weight: 600;
+      transition: background-color 0.15s ease, color 0.15s ease;
+    }
+
+    .news-source-line a:hover {
+      background-color: #0d0d0d;
+      color: #ffffff;
+      text-decoration: none;
+      padding: 1px 4px;
+    }
+
+    .news-summary {
+      font-size: 15px;
+      color: #2b2b2b;
+      line-height: 1.7;
+      margin-bottom: 24px;
+    }
+
+    /* Gancho Comercial ARI Consulting */
+    .commercial-hook {
+      background-color: #f8f9fa;
+      border: 1px solid #e0e0e0;
+      border-left: 4px solid #0d0d0d;
+      padding: 20px 22px;
+    }
+
+    .hook-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .hook-badge {
+      background: #0d0d0d;
+      color: #ffffff;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 2px 7px;
+    }
+
+    .hook-label {
+      font-size: 11.5px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #0d0d0d;
+    }
+
+    .hook-content {
+      font-size: 14px;
+      color: #1f1f1f;
+      line-height: 1.65;
+    }
+
+    /* Rodapé Institucional */
+    .footer {
+      margin-top: 36px;
+      padding: 24px 0;
+      border-top: 1px solid #e0e0e0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 12px;
+      color: #777777;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    @media (max-width: 680px) {
+      body {
+        padding: 20px 14px;
+      }
+      .header, .news-card {
+        padding: 24px 18px;
+      }
+      .brand-title {
+        font-size: 24px;
+      }
+      .header-meta {
+        text-align: left;
+        border-left: none;
+        padding-left: 0;
+        margin-top: 12px;
+      }
+      .footer {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Cabeçalho Executivo Institucional -->
+    <header class="header">
+      <div class="header-top">
+        <div class="brand-group">
+          <div class="brand-eyebrow">ARI CONSULTING &bull; DIVISÃO DE MERCADO</div>
+          <h1 class="brand-title">ARI NEWS</h1>
+          <div class="brand-subtitle">Inteligência Estratégica &amp; Monitoramento Corporativo</div>
+        </div>
+        <div class="header-meta">
+          <div class="meta-badge">BRIEFING DIÁRIO</div>
+          <div class="meta-date">01 de Outubro de 2026</div>
+        </div>
+      </div>
+      <div class="header-summary">
+        Curadoria executiva em tempo real via <strong>Google Search Grounding</strong> focada em Transformação Digital, ERP, Nuvem, Automação e Gestão Fiscal no Brasil, orientada à geração de oportunidades de negócio com soluções <strong>Oracle Cloud</strong>.
+      </div>
+    </header>
+
+    <!-- Feed de Notícias -->
+    <main class="news-feed">
+      
+      <article class="news-card">
+        <div class="card-topbar">
+          <span class="card-index">01 / 03</span>
+          <span class="card-tag">MANUFATURA & CLOUD FISCAL</span>
+        </div>
+        <h2 class="news-title">Indústria de embalagens e manufatura acelera migração para nuvem visando automação contábil e fiscal</h2>
+        <div class="news-source-line">
+          <span>Veículo: <strong class="source-name">Valor Econômico / Negócios Corporativos</strong></span>
+          <span>&bull;</span>
+          <a href="https://valor.globo.com/empresas/noticia/industria-manufatura-nuvem-automacao-fiscal" target="_blank" rel="noopener noreferrer">Acessar Matéria Original &rarr;</a>
+        </div>
+        <p class="news-summary">Empresas dos setores de embalagens e manufatura estão acelerando a transição de seus sistemas contábeis legados para ambientes integrados em nuvem. A meta primordial é unificar a apuração fiscal às linhas produtivas, eliminando gargalos de conciliação e custos decorrentes de retrabalho.</p>
+        
+        <div class="commercial-hook">
+          <div class="hook-header">
+            <span class="hook-badge">ORACLE CLOUD</span>
+            <span class="hook-label">Gancho Comercial ARI Consulting</span>
+          </div>
+          <p class="hook-content">A ARI Consulting oferece um diagnóstico completo de integração para ERPs legados e modernização contábil, permitindo que líderes de manufatura consolidem operações fiscais no Oracle Fusion Cloud ERP sem paradas nas linhas de produção e com total governança de dados.</p>
+        </div>
+      </article>
+      
+      <article class="news-card">
+        <div class="card-topbar">
+          <span class="card-index">02 / 03</span>
+          <span class="card-tag">GOVERNANÇA FISCAL & ERP</span>
+        </div>
+        <h2 class="news-title">Receita Federal e novas diretrizes fiscais impulsionam adoção de módulos de governança contábil em tempo real</h2>
+        <div class="news-source-line">
+          <span>Veículo: <strong class="source-name">Gazeta Mercantil / Gestão Tributária</strong></span>
+          <span>&bull;</span>
+          <a href="https://www.gazetamercantil.com.br/negocios/diretrizes-fiscais-governanca-contabil" target="_blank" rel="noopener noreferrer">Acessar Matéria Original &rarr;</a>
+        </div>
+        <p class="news-summary">A intensificação das fiscalizações digitais e as frequentes atualizações nos leiautes do SPED têm impulsionado a adoção de módulos de governança contábil em tempo real. A automatização do cruzamento de notas e obrigações tornou-se crucial para mitigar autuações e passivos contingentes.</p>
+        
+        <div class="commercial-hook">
+          <div class="hook-header">
+            <span class="hook-badge">ORACLE CLOUD</span>
+            <span class="hook-label">Gancho Comercial ARI Consulting</span>
+          </div>
+          <p class="hook-content">Momento ideal para propor a implantação do Oracle Fusion Financials e arquiteturas de Tax Governance, reduzindo drasticamente o fechamento mensal (Fast Close) de semanas para dias, com auditoria fiscal contínua e parametrização tributária automatizada.</p>
+        </div>
+      </article>
+      
+      <article class="news-card">
+        <div class="card-topbar">
+          <span class="card-index">03 / 03</span>
+          <span class="card-tag">SUPPLY CHAIN & IA PREDITIVA</span>
+        </div>
+        <h2 class="news-title">Cadeia de suprimentos inteligente: empresas buscam soluções preditivas contra oscilações de insumos</h2>
+        <div class="news-source-line">
+          <span>Veículo: <strong class="source-name">Exame / Logística & Supply Chain</strong></span>
+          <span>&bull;</span>
+          <a href="https://exame.com/negocios/cadeia-suprimentos-solucoes-preditivas-insumos" target="_blank" rel="noopener noreferrer">Acessar Matéria Original &rarr;</a>
+        </div>
+        <p class="news-summary">A volatilidade nos custos de insumos e as interrupções de fornecimento global levaram companhias brasileiras a buscarem inteligência preditiva na gestão de suprimentos. A integração ponta a ponta entre compras, estoques e controladoria tornou-se imperativo estratégico para a preservação de margens.</p>
+        
+        <div class="commercial-hook">
+          <div class="hook-header">
+            <span class="hook-badge">ORACLE CLOUD</span>
+            <span class="hook-label">Gancho Comercial ARI Consulting</span>
+          </div>
+          <p class="hook-content">Abordagem orientada ao Oracle Supply Chain Management (SCM Cloud), potencializada pela metodologia proprietária OCIM (Oracle Cloud Implementation Methodology) em 6 fases da ARI Consulting, conferindo previsibilidade analítica de suprimentos e ROI comprovado desde o primeiro trimestre.</p>
+        </div>
+      </article>
+      
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+      <span>ARI Consulting &copy; Inteligência de Negócios</span>
+      <span>Oracle Partner Ecosystem &bull; Confidencial</span>
+    </footer>
+  </div>
+</body>
+</html>

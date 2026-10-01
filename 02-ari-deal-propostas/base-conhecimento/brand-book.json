@@ -1,0 +1,139 @@
+{
+  "brand": "ARI CONSULTING",
+  "tagline": "Consultoria Oracle · São Paulo — Capital",
+  "version": "2026",
+
+  "colors": {
+    "background": "#FFFFFF",
+    "text_primary": "#0D0D0D",
+    "text_muted": "#555555",
+    "surface_alt": "#F9F9F9",
+    "accent_block": "#0D0D0D",
+    "accent_text": "#FFFFFF",
+    "table_header_bg": "#0D0D0D",
+    "table_header_text": "#FFFFFF",
+    "table_row_alt": "#F9F9F9",
+    "table_total_bg": "#0D0D0D",
+    "table_total_text": "#FFFFFF"
+  },
+
+  "typography": {
+    "font_family": "Arial",
+    "headline": {
+      "weight": "Bold",
+      "size_h1": "28pt",
+      "size_h2": "18pt",
+      "size_h3": "13pt",
+      "alignment": "left",
+      "transform": "uppercase"
+    },
+    "body": {
+      "weight": "Regular",
+      "size": "11pt",
+      "line_height": "1.5"
+    },
+    "meta": {
+      "weight": "Regular",
+      "size": "9pt",
+      "color": "#555555"
+    }
+  },
+
+  "components": {
+    "cover": {
+      "layout": "full_bleed_white",
+      "logo_position": "top_left",
+      "pills": {
+        "style": "rectangular_black",
+        "text_transform": "uppercase",
+        "font_size": "9pt",
+        "background": "#0D0D0D",
+        "text_color": "#FFFFFF",
+        "separator": " · "
+      },
+      "client_name": {
+        "font_size": "32pt",
+        "weight": "Bold",
+        "color": "#0D0D0D"
+      },
+      "proposal_number": {
+        "font_size": "10pt",
+        "color": "#555555"
+      }
+    },
+
+    "section_header": {
+      "format": "XX / 05",
+      "number_color": "#555555",
+      "number_size": "9pt",
+      "title_color": "#0D0D0D",
+      "title_size": "18pt",
+      "title_weight": "Bold",
+      "divider": "1pt solid #0D0D0D"
+    },
+
+    "tables": {
+      "border": "none",
+      "header_background": "#0D0D0D",
+      "header_text": "#FFFFFF",
+      "header_font_size": "9pt",
+      "header_transform": "uppercase",
+      "row_alt_background": "#F9F9F9",
+      "row_default_background": "#FFFFFF",
+      "cell_padding": "8pt",
+      "font_size": "10pt"
+    },
+
+    "investment_table": {
+      "total_row_background": "#0D0D0D",
+      "total_row_text": "#FFFFFF",
+      "total_row_weight": "Bold",
+      "discount_row_style": "italic",
+      "payment_conditions_font_size": "9pt",
+      "payment_conditions_color": "#555555"
+    },
+
+    "cta": {
+      "style": "clean_text_with_arrow",
+      "format": "Texto do CTA →",
+      "font_size": "12pt",
+      "weight": "Bold",
+      "color": "#0D0D0D"
+    },
+
+    "signature": {
+      "fields": ["consultor_nome", "cargo", "empresa", "sede", "email", "telefone"],
+      "font_size": "10pt",
+      "divider_above": "1pt solid #0D0D0D"
+    }
+  },
+
+  "document": {
+    "format": "A4",
+    "margins": {
+      "top": "2.5cm",
+      "bottom": "2.5cm",
+      "left": "2.5cm",
+      "right": "2.5cm"
+    },
+    "sections": [
+      "Capa",
+      "01 / 05 — Entendimento do Contexto",
+      "02 / 05 — Solução Proposta",
+      "03 / 05 — Metodologia e Cronograma",
+      "04 / 05 — Investimento",
+      "05 / 05 — Próximos Passos"
+    ],
+    "file_naming": "Proposta-[NUM]-[ANO]-[Nome-Cliente]-ARI-CONSULTING.docx"
+  },
+
+  "design_rules": [
+    "Sem bordas arredondadas — todos os componentes usam cantos retos (90°)",
+    "Sem CDN ou fontes externas — apenas Arial e variações",
+    "Sem cores fora da paleta definida — manter consistência total",
+    "Pills/tags da capa sempre em caixa alta sobre fundo preto",
+    "Numeração de seções sempre no formato XX / 05 em cinza muted",
+    "Tabela de investimento com cabeçalho e linha de total em bloco preto",
+    "CTA final em texto limpo com seta — nunca botão colorido"
+  ]
+}

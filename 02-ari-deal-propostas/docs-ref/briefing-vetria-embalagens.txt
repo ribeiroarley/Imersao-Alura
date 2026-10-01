@@ -1,0 +1,126 @@
+BRIEFING DE CLIENTE — USO INTERNO
+Para: ARI — Copiloto Comercial
+Consultor responsável: [a preencher]
+Data: [data da reunião]
+
+=======================================================
+DADOS DO CLIENTE
+=======================================================
+
+Empresa: Vetria Embalagens Industriais S.A.
+CNPJ: 78.901.234/0001-56
+Setor: Indústria — Embalagens plásticas e flexíveis
+Porte: Média-grande empresa (1.450 colaboradores)
+Localização: Sede em Joinville (SC) / Plantas em 3 estados
+
+=======================================================
+CONTEXTO DO NEGÓCIO
+=======================================================
+
+A Vetria Embalagens é uma das principais fabricantes de embalagens
+plásticas e flexíveis do Sul do Brasil, com 5 plantas industriais
+distribuídas em Santa Catarina, Paraná e Rio Grande do Sul. A empresa
+fatura aproximadamente R$ 680 milhões por ano e atende indústrias
+de alimentos, bebidas, higiene e agronegócio.
+
+Entre 2022 e 2025, a Vetria adquiriu dois concorrentes regionais
+para ganhar escala. As aquisições trouxeram crescimento de receita,
+mas também herança tecnológica: hoje o grupo opera com três ERPs
+diferentes (um Protheus na matriz, um Sankhya em duas plantas
+adquiridas e um sistema próprio desenvolvido em Delphi na planta
+mais antiga). O financeiro central trabalha como um "tradutor"
+permanente entre os três mundos.
+
+=======================================================
+SITUAÇÃO ATUAL — PRINCIPAIS DORES
+=======================================================
+
+DOR 1 — FECHAMENTO CONTÁBIL DE 14 DIAS ÚTEIS
+O fechamento mensal consolidado leva em média 14 dias úteis,
+porque a equipe contábil precisa extrair balancetes dos três ERPs,
+reclassificar planos de contas incompatíveis em planilhas e
+consolidar manualmente. O CFO considera aceitável um fechamento
+de até 5 dias úteis — padrão de mercado para o setor.
+
+DOR 2 — CONTAS A PAGAR SEM FLUXO DE APROVAÇÃO CENTRALIZADO
+Cada planta aprova pagamentos localmente, com alçadas diferentes
+e sem trilha de auditoria unificada. Em uma auditoria interna de
+2025, foram identificados 23 pagamentos duplicados a fornecedores
+no ano, somando R$ 340 mil recuperados com esforço jurídico.
+
+DOR 3 — SEM VISÃO CONSOLIDADA DE FLUXO DE CAIXA
+A tesouraria monta a posição de caixa do grupo manualmente toda
+manhã, cruzando extratos de 11 contas bancárias com os três ERPs.
+O processo consome 3 horas diárias de um analista sênior e ainda
+assim a posição só fica pronta às 11h — tarde demais para decisões
+de aplicação e captação do dia.
+
+DOR 4 — GESTÃO DE ATIVOS INDUSTRIAIS EM PLANILHAS
+O parque fabril tem mais de 4.200 ativos imobilizados (extrusoras,
+impressoras flexográficas, laminadoras). O controle de depreciação
+é feito em planilhas por planta, com critérios diferentes, o que
+já gerou apontamento em auditoria externa e retrabalho no
+fechamento fiscal.
+
+=======================================================
+MÓDULOS DE INTERESSE
+=======================================================
+
+Prioridade ALTA:
+- Oracle ERP Cloud — General Ledger (plano de contas único)
+- Oracle ERP Cloud — Accounts Payable (fluxo de aprovação centralizado)
+- Oracle ERP Cloud — Cash Management (posição de caixa consolidada)
+- Integração do Oracle ERP com os ERPs das plantas durante a transição
+
+Prioridade MÉDIA (fase futura):
+- Oracle ERP Cloud — Fixed Assets (gestão de ativos e depreciação)
+- Oracle ERP Cloud — Expense Management
+
+=======================================================
+RESTRIÇÕES E CONDICIONANTES
+=======================================================
+
+PRAZO: O CFO quer o novo plano de contas operacional no Oracle
+antes do início do orçamento de 2027, cujo ciclo de planejamento
+começa em 1º de setembro de 2026. O go-live do General Ledger
+precisa ocorrer até essa data.
+
+ORÇAMENTO: o conselho aprovou R$ 350.000 para a fase 1 do projeto
+de unificação financeira. Valores acima disso exigem nova rodada
+de aprovação no conselho, o que atrasaria o cronograma em pelo
+menos 60 dias. A proposta deve caber nesse teto.
+
+MIGRAÇÃO GRADUAL: o CIO foi claro que não haverá "big bang".
+As plantas adquiridas continuarão operando nos ERPs atuais por
+6 a 12 meses, enviando dados ao Oracle via integração, até a
+migração completa. Os conectores são parte crítica do projeto.
+
+DECISORES:
+- Aprovação técnica: CIO — Eng. Paulo Nagata
+- Aprovação financeira: CFO — Sr. Gustavo Brandt
+- Patrocinador executivo: CEO — Sra. Helena Vetri
+- Próxima reunião com decisores: em 20 dias a contar de hoje
+
+=======================================================
+INFORMAÇÕES ADICIONAIS (anotações do consultor)
+=======================================================
+
+- O Sr. Gustavo (CFO) mede tudo em dias de fechamento. Na proposta,
+  ancorar o ROI na redução de 14 para 5 dias úteis de fechamento
+  e no fim dos pagamentos duplicados (R$ 340 mil/ano de exposição).
+
+- O Eng. Paulo (CIO) é técnico e cético com promessas de integração.
+  Detalhar na proposta a arquitetura dos conectores (OIC) e citar
+  experiência prévia com Protheus será decisivo para a aprovação.
+
+- A Sra. Helena (CEO) participou pessoalmente da reunião inicial —
+  sinal de que o projeto tem patrocínio de topo. Ela mencionou a
+  intenção de abrir capital (IPO) em 2028, o que torna a governança
+  financeira unificada ainda mais estratégica.
+
+- O contrato de licenças do Sankhya nas plantas adquiridas vence
+  em dezembro de 2026 — a empresa quer evitar a renovação.
+
+- Concorrentes no processo: a Vetria confirmou que recebeu proposta
+  de uma big four para o mesmo escopo, com valor "significativamente
+  mais alto", segundo o CFO.
